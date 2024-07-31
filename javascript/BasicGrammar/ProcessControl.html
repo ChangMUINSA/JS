@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程控制</title>
+    <script>
+        'use strict';
+        //if
+        //循环,避免死循环
+        var age =3;
+        while(age<100){
+            age = age + 2;
+            console.log(age);
+        }
+
+
+
+        for(let i = 0;i <100;i++){
+            console.log(i);
+        }
+
+        do {
+            age = age + 2;
+            console.log(age);
+        } while (age<100);
+        //函数 forEach 循环
+        var age = [12,3,4,5,6,5,56,5,2];
+        age.forEach(function(value){
+            console.log(value);
+        });
+        //for(var index in object){}
+        for(var num in age){
+            if (age.hasOwnProperty(num)) {
+                console.log("存在");
+                console.log(age[num]);
+            }
+            
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

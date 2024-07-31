@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除DOM节点</title>
+   
+</head>
+<body>
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+
+</div>
+
+<script>
+    //删除节点的步骤：先获取父节点，再通过父节点删除自己
+
+    var self = document.getElementById('p1');
+    var father = p1.parentElement;
+    father.removeChild(self);
+
+    //还可以通过指定下标删除
+    //删除是一个动态的过程
+    //删除对个节点的时候，children是在时刻变化的，删除节点时一定要注意！
+    father.removeChild(father.children[0]);
+    // father.removeChild(father.children[1]);  不对
+    // father.removeChild(father.children[2]);  不对
+
+    //获得DOM节点
+
+    var h1 = document.getElementsByTagName('h1');
+
+    var p1 = document.getElementById('p1');
+
+    var p2 = document.getElementsByClassName('p2');
+
+    var father  = document.getElementById('father');
+
+    father.removeChild(p1);
+
+
+
+</script>
+</body>
+</html>

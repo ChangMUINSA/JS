@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组类型详解</title>
+    <script>
+        //Array可以包含任意类型的数据
+        var arr = [1,2,3,4,5,6];
+        console.log(arr);
+        //长度,且长度可变
+        console.log(arr.length);
+
+        arr[0]=0;//通过下标取值和赋值
+        console.log(arr);
+        //注意：加入给arr.length赋值，数组大小就会发生变化
+        arr.length=10;
+        console.log(arr.length);
+        console.log(arr);
+        //如果赋值过小，元素就会丢失
+        arr.length=2;
+        console.log(arr);
+        //通过元素获得下标索引
+        console.log(arr.indexOf(2));
+        var arr = [1,2,3,4,5,6,"1","2"];
+        //字符串"1"和数字1是不同的
+        console.log(arr.indexOf("1"));
+
+        //截取数组的一部分，返回一个新的数组,类似于String中的Substring
+        console.log(arr.slice(3));
+
+        //push() 压入尾部,pop()弹出尾部的一个元素
+        arr.push('a','b');
+        console.log(arr);
+        arr.pop('b');
+        arr.pop();
+        //unshift()压入头部,shift弹出头部一个元素
+        arr.unshift('m','n');
+        arr.shift('m');
+
+        //排序
+        var arr = ['b','c','a'];
+        arr.sort();
+
+        //元素反转
+        arr.reverse();
+        //数组拼接 concat
+        //注意 concat并没有修改数组，只是会返回一个新的数组
+        arr.concat([1,2,3]);
+        console.log(arr);
+
+        //连接符 join
+        //打印拼接数组使用特定的字符串连接 'c-b-a'
+        arr.join('-');
+
+        //多维数组
+        var arr2 = [[1,2],[2,3],["3","4"]];
+        console.log(arr2[1][1]);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

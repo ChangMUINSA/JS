@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON对象</title>
+    <script>
+        //Json是一种轻量级数据传输格式
+        //在js中一切皆为对象，任何js支持的类型都可以用JSON来表示
+        /**
+         * 格式
+         * 对象都用{}
+         * 数组都用[]
+         * 所有的键值对都用 key:value
+         * 
+        */
+
+        var user = {
+            name : "JavaST",
+            age : "3",
+            sex : "girl"
+        }
+        //Json字符串和JS对象的转化;
+        var json = '{"name":"JavaST","age":"3","sex":"girl"}';
+        var obj = {name:"JavaST",age:"3",sex:"girl"}
+
+
+        //对象转化为Json字符串
+        var josnUser = JSON.stringify(user);
+        //{"name":"JavaST","age":"3","sex":"girl"}
+
+        //json字符串转化为对象 参数为json字符串
+        var obj = JSON.parse('{"name":"JavaST","age":"3","sex":"girl"}');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

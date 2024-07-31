@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的定义和参数的获取</title>
+    <script>
+        //方法：对象（属性，方法）
+        //函数：放的位置不同
+
+        //定义方式一
+        //绝对值函数
+        function abs(x){
+            if(typeof x !== 'number'){
+                //手动抛出异常来判断
+                throw 'Not a number!'
+            }
+            if (x>0) {
+                return x;
+            } else {
+                return -x;
+            }
+        }
+        //一但执行return,代表函数结束，返回结果
+        //如果没有执行return,函数执行完也会返回结果，结果就是NaN或者undefined
+        
+        //定义方式二
+        var abs1 = function(x){
+            console.log("x=>"+x);
+            for (var i= 0; i< arguments.length;i++){
+                console.log(arguments[i]);
+            }
+            if (x>0) {
+                return x;
+            } else {
+                return -x;
+            }
+        }
+        //fonction(x){}这是一个匿名函数，但是可以把结果赋值给abs,通过abs就可以调用函数！
+        //方式一和方式二等价
+        //调用函数abs(10) abs(-10)
+
+        //参数问题：JS 可以传任意个参数，也可以不传递参数
+
+        //参数进来是否存在？存在 argument
+        //假设不存在参数，如何规避？ 手动抛出异常
+
+        //arguments是一个JS免费赠送的关键字；代表传递进来的所有参数，是一个数组
+        //问题：arguments会包含所有的参数，，我们有时候想使用多余的参数来进行附加操作，需要排除已有的参数
+
+        //rest获取除了已经定义的参数之外（当前变量）之后的所有参数
+        //reset参数只能写在最后面，必须用...标识
+        function aa(a,b,...rest){
+            console.log("a=>"+a);
+            console.log("b=>"+b);
+            console.log(rest);
+            //原来的方式console.log("a=>"+a);
+            if(arguments.length>2){
+                for(var i= 2; i<arguments.length;i++){
+
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

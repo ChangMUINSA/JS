@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串</title>
+    <script>
+        'use strict';
+        //正常字符串，我们使用单引号或者双引号包裹
+        //注意转意字符 \
+        console.log('a');
+        console.log("a");
+        console.log('a\'');
+        console.log('a\nb');
+        console.log('a\tb');
+        console.log('\u4e2b'); // \u#### Unicode字符
+        console.log('\x41'); //Ascll字符
+
+        //多行字符串编写
+        var msg = `hello
+        word
+        你好呀
+        你好
+        ST`;
+        //模板字符串
+        let name = "JavaST";
+        let age = 3;
+        let msg1 = `你好呀，${name}` 
+        let msg2 = `你好呀` + name;
+
+        //字符串长度
+        var stu = "student";
+        console.log(stu.length);
+        console.log(stu[0]);
+        
+        //字符串的可变性：不可变
+        //stu[0]=1
+            //1
+        //console.log(stu)
+        //student
+
+        //大小写转换
+        //注意这里是方法不是属性了
+        console.log(stu.toUpperCase());
+        console.log(stu.toLowerCase());
+        
+        console.log(stu.indexOf('t'));
+        //[)
+        console.log(stu.substring(1,3));
+        //从第一个字符串截取到最后一个字符串
+        console.log(stu.substring(1));
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

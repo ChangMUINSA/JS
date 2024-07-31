@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部对象</title>
+    <title>Date日期对象</title>
+    <script>
+        'use strict';
+        //标准对象
+        /*
+        typeof 123
+        'number'
+        typeof "123"
+        'string'
+        typeof true
+        'boolean'
+        typeof NaN
+        'number'
+        typeof []
+        'object'
+        typeof {}
+        'object'
+        typeof Math.abs
+        'function'
+        typeof undifined
+        'undefined'
+        */
+
+        //Date
+        var now = new Date(); 
+        now.getFullYear();//年份
+        now.getMonth();//月  0-11代表月
+        now.getDate();//日
+        now.getDay();//星期
+        now.getHours();//时
+        now.getMinutes();//分
+        now.getSeconds();//秒
+
+        now.getTime();//时间戳  毫秒数 1970.1.1 0:00:00
+        // 还原时间戳转为时间 new Date(传入毫秒数)
+        
+        //转化为本地时间
+        var now1 = new Date(1720644281649);
+        now1.toLocaleDateString();//注意调用的是一个方法而不是属性
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法的定义和调用以及Apply</title>
+    <script>
+        'use strict';
+        var JavaST = {
+            name : "chang",
+            birth: 1999,
+            //方法
+            //方法就是把函数放在对象的里面，对象只有两个东西：属性和方法
+            //属性：name : "chang",
+            //方法：方法，一定要带（）JavaST.age()
+
+            age :function(){
+                //今年减去出生年月日
+                var date = new Date();
+                var now = date.getFullYear();
+                return now-this.birth;
+            
+            },
+            age1: getAge
+
+        }
+        //this 代表什么
+        //JavaST.age1()成功
+        //getAge（）NaN 注意：this要指向使用它的人，这里是window使用，所以不具备这个属性 this.birth
+        //this是无法指向的，是默认指向调用它的对象 java定义
+
+
+        function getAge(){
+                //今年减去出生年月日
+                var date = new Date();
+                var now = date.getFullYear();
+                return now-this.birth;
+        }
+
+        //apply
+        //在js中可以控制this的指向
+        getAge.apply(JavaST,[]);//代表 this指向了JavaST,参数为空
+    </script>
+</head>
+<body>
+
+</body>
+</html>

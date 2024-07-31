@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面相对象class继承</title>
+    <script>
+        /**
+         * 对比java
+         * 类：模板 原型对象
+         * 对象：具体的实例
+         * 
+         * 原型链：__proto__
+        */
+        'use strict'
+        //class关键字是在 ES6引入的
+        function Student(name){
+            this.name=name;
+        }
+
+        //给Student新增一个方法
+
+        Student.prototype.hello = function (){
+            alert("hello")
+        }
+
+
+        //ES6之后======================
+        //定义一个学生的类
+        class Student1 {
+            constructor(name){
+                this.name = name;
+            }
+            hello(){
+                alert("hello1")
+            }
+        }
+        /**
+         * 定义一个类
+         * 属性，方法
+        */
+
+        var xiaoming = new Student("xiaoming");
+
+        //继承 查看对象原型
+
+        class xiaoStudent extends Student{
+            constructor(name,grade){
+                super(name);
+                this.age=grade;
+            }
+            myGrade(){
+                alert("pp");
+            }
+
+        }
+
+        var cd = new xiaoStudent("cd",6);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
